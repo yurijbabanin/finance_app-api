@@ -1,0 +1,17 @@
+[
+{% for el in cost %}
+    {% if loop.last  %}
+    {"id": {{ el.id }},
+    "u_id": {{ el.u_id }},
+    "date_m": {{ el.date_m }},
+    "desc": "{{ el.desc }}",
+    "sum": {{ el.sum }}}
+    {% else %}
+    {"id": {{ el.id }},
+    "u_id": {{ el.u_id }},
+    "date_m": {{ el.date_m }},
+    "desc": "{{ el.desc }}",
+    "sum": {{ el.sum }}},
+    {% endif %}
+{% endfor %}
+]

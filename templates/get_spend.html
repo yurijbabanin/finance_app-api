@@ -1,0 +1,23 @@
+[
+{% for el in spends %}
+    {% if loop.last  %}
+    {"id": {{ el.id }},
+    "u_id": {{ el.u_id }},
+    "date_d": {{ el.date_d }},
+    "date_m": {{ el.date_m }},
+    "date_y": {{ el.date_y }},
+    "desc": "{{ el.desc }}",
+    "category": {{ el.category }},
+    "sum": {{ el.spend }}}
+    {% else %}
+    {"id": {{ el.id }},
+    "u_id": {{ el.u_id }},
+    "date_d": {{ el.date_d }},
+    "date_m": {{ el.date_m }},
+    "date_y": {{ el.date_y }},
+    "desc": "{{ el.desc }}",
+    "category": {{ el.category }},
+    "sum": {{ el.spend }}},
+    {% endif %}
+{% endfor %}
+]
